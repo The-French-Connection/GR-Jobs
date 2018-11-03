@@ -1,0 +1,25 @@
+{
+  "name": "GR-Jobs",
+  "version": "1.0.0",
+  "description": "Job App that redesigns how open positions are filled.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-French-Connection/GR-Jobs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-French-Connection/GR-Jobs/issues"
+  },
+  "homepage": "https://github.com/The-French-Connection/GR-Jobs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
