@@ -5,6 +5,9 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const routes = require('./routes').default;
+
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
@@ -22,6 +25,8 @@ app.get('/', (req, res) => {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
