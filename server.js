@@ -11,8 +11,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.get("/test", (req, res) => {
-    res.json("yo!!!");
+app.get('/test', (req, res) => {
+  res.json('yo!!!');
 });
 
 app.get('/', (req, res) => {
