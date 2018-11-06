@@ -1,16 +1,15 @@
-import { join } from 'path';
-// import apiRoutes from "./api";
-
+const path = require('path');
 const router = require('express').Router();
+const apiRoutes = require('./api');
 
-// API Routes (if route starts w/ "/api", use the routes in apiRoutes
-// ...shortens to code and organizes in seperate file)
-// router.use('/api', apiRoutes);
+// API Routes (if route starts w/ "/api", use the routes in apiRoutes...
+// shortens to code and organizes in seperate file)
+router.use('/api', apiRoutes);
 
 
 // If no API routes are hit, send the React app
 router.use((req, res) => {
-  res.sendFile(join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-export default router;
+module.exports = router;
